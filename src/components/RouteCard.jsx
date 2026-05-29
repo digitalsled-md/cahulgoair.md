@@ -22,7 +22,7 @@ const benefitsIcons = [
   { icon: stroller, alt: "Luggage support" },
 ];
 
-const RouteCard = ({ route }) => {
+const RouteCard = ({ route, setIsMainFormOpen }) => {
   const { t } = useLanguage();
 
   return (
@@ -89,7 +89,11 @@ const RouteCard = ({ route }) => {
           </p>
           <p>{t.cards.pickupDescription}</p>
         </div>
-        <Button size="max" className="mt-auto">
+        <Button
+          size="max"
+          className="mt-auto"
+          onClick={() => setIsMainFormOpen(true)}
+        >
           <img src={whiteSchedule} alt="" />
           {t.cards.button}
         </Button>

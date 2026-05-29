@@ -20,7 +20,6 @@ const App = () => {
         <FAQ />
       </main>
       <Footer />
-      <MainForm />
     </>
   );
 };

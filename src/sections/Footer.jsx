@@ -33,13 +33,10 @@ const Footer = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 md:flex-nowrap">
-            <a
-              href=""
-              className="bg-accent flex h-16 w-70 items-center justify-center gap-1.5 rounded-2xl"
-            >
+            <Button className="h-16" as="a" href="tel:+373">
               <img src={phone} alt="" />
               {t.nav.call}
-            </a>
+            </Button>
             <div className="flex items-center gap-3">
               <a className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 transition-all hover:bg-white/20">
                 <img src={viber} alt="" />

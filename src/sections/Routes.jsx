@@ -3,9 +3,24 @@ import Button from "../components/Button";
 import RouteCard from "../components/RouteCard";
 import arrows from "../assets/icons/arrows.svg";
 import mark from "../assets/icons/mark.svg";
+import MainForm from "../components/MainForm";
+import { useState, useEffect } from "react";
 
 const Routes = () => {
   const { t } = useLanguage();
+  const [isMainFormOpen, setIsMainFormOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMainFormOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMainFormOpen]);
 
   const routes = [
     {
@@ -44,7 +59,7 @@ const Routes = () => {
   ];
 
   return (
-    <section id="routes" className="bg-background scroll-mt-40 px-6 py-25">
+    <section id="routes" className="bg-background px-6 py-25">
       <div className="container mx-auto flex flex-col gap-13">
         <h2 className="text-secondary space-y-1.5 text-3xl font-bold md:text-4xl lg:text-5xl">
           <span className="text-accent">3 </span>
@@ -54,7 +69,11 @@ const Routes = () => {
         </h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {routes.map((route) => (
-            <RouteCard route={route} key={route.id} />
+            <RouteCard
+              route={route}
+              key={route.id}
+              setIsMainFormOpen={setIsMainFormOpen}
+            />
           ))}
         </div>
         <p>
@@ -63,6 +82,14 @@ const Routes = () => {
           <span className="font-semibold"> {t.cards.footer2}.</span>
         </p>
       </div>
+      <MainForm
+        isMainFormOpen={isMainFormOpen}
+        setIsMainFormOpen={setIsMainFormOpen}
+      />
+      <div
+        className={`fixed inset-0 z-10 bg-black/20 backdrop-blur-md ${isMainFormOpen ? "block" : "hidden"}`}
+        onClick={() => setIsMainFormOpen(false)}
+      />
     </section>
   );
 };

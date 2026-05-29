@@ -77,7 +77,7 @@ const WhyUs = () => {
         <div className="mt-5 flex flex-col items-center gap-5 self-center md:flex-row">
           <p className="font-semibold text-white">{t.whyUs.bottomText}</p>
 
-          <Button>
+          <Button as="a" href="#routes">
             {t.whyUs.button}
             <img src={whiteSchedule} alt="" />
           </Button>

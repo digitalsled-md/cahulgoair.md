@@ -14,7 +14,7 @@ const initialFormData = {
   additional: "",
 };
 
-const MainForm = () => {
+const MainForm = ({ isMainFormOpen }) => {
   const { t, language } = useLanguage();
 
   const [formData, setFormData] = useState(initialFormData);
@@ -210,7 +210,9 @@ const MainForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-6xl rounded-[32px] bg-[#ECECEC] p-8"
+      className={`fixed inset-x-4 top-30 bottom-6 z-20 container mx-auto overflow-y-auto rounded-4xl bg-[#ECECEC] p-8 ${
+        isMainFormOpen ? "block" : "hidden"
+      }`}
     >
       <h2 className="mb-8 text-3xl font-bold text-[#355070] md:text-4xl">
         {t.form.title}
