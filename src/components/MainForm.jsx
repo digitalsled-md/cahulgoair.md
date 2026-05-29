@@ -141,7 +141,7 @@ const MainForm = () => {
       arrival_type: formData.arrival_type,
       arrival_datetime: new Date(formData.arrival_datetime).toISOString(),
       consent: formData.consent,
-      additional: formData.additional,
+      notes: formData.additional,
     };
 
     if (formData.ticket_photo) {
