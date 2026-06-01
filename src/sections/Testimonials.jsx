@@ -31,7 +31,7 @@ const Testimonials = () => {
   return (
     <section className="bg-background py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6">
           {reviews.map((review, index) => {
             const isOpen = isDesktop || openedCard === index;
 
