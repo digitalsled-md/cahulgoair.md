@@ -210,7 +210,7 @@ const MainForm = ({ isMainFormOpen }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`fixed inset-x-4 top-30 bottom-6 z-20 container mx-auto overflow-y-auto rounded-4xl bg-[#ECECEC] p-8 ${
+      className={`fixed top-30 right-2 bottom-6 left-2 z-20 container mx-auto overflow-y-auto rounded-4xl bg-[#ECECEC] p-8 ${
         isMainFormOpen ? "block" : "hidden"
       }`}
     >
