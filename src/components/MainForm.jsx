@@ -1,5 +1,11 @@
 import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import viber from "../assets/icons/viber.svg";
+import whatsapp from "../assets/icons/whatsapp.svg";
+import instagram from "../assets/icons/instagram.svg";
+import facebook from "../assets/icons/facebook.svg";
+import phone from "../assets/icons/phone.svg";
+import Button from "../components/Button";
 
 const initialFormData = {
   name: "",
@@ -210,7 +216,7 @@ const MainForm = ({ isMainFormOpen }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`fixed top-30 right-2 bottom-6 left-2 z-20 container mx-auto overflow-y-auto rounded-4xl bg-[#ECECEC] p-8 ${
+      className={`animate-fade-in fixed top-30 right-2 bottom-6 left-2 z-20 container mx-auto overflow-y-auto rounded-4xl bg-[#ECECEC] p-8 ${
         isMainFormOpen ? "block" : "hidden"
       }`}
     >
@@ -277,6 +283,41 @@ const MainForm = ({ isMainFormOpen }) => {
               placeholder={t.form.additionalPlaceholder}
               className="h-32 w-full resize-none rounded-xl border border-transparent bg-white px-4 py-3 outline-none focus:border-[#355070]"
             />
+          </div>
+          <div className="mt-8 flex flex-col flex-wrap gap-4 md:flex-nowrap">
+            <p>{t.contact.description}</p>
+            <div className="flex items-center gap-3">
+              <a
+                href="tel:+37367395926"
+                className="bg-accent flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={phone} alt="" />
+              </a>
+
+              <a
+                href="https://wa.me/37367395926"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={whatsapp} alt="" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/drum_bun_dovezet/"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={instagram} alt="" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61553870166515"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={facebook} alt="" />
+              </a>
+            </div>
           </div>
         </div>
 

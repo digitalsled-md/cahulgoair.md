@@ -42,7 +42,7 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-20">
           <div className="lg:w-1/3">
-            <h2 className="max-w-75 text-4xl leading-none font-bold text-white md:text-5xl">
+            <h2 className="max-w-75 text-4xl leading-none font-bold text-white xl:text-5xl">
               {t.faq.title}
             </h2>
           </div>

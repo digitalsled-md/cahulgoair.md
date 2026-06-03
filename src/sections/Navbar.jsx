@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageButton />
 
-          <Button size="sm" as="a" href="tel:+373">
+          <Button size="sm" as="a" href="tel:+37367395926">
             <img src={phone} alt="" />
             {t.nav.call}
           </Button>

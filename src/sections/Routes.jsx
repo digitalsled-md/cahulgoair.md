@@ -90,7 +90,7 @@ const Routes = () => {
         setIsMainFormOpen={setIsMainFormOpen}
       />
       <div
-        className={`fixed inset-0 z-10 bg-black/20 backdrop-blur-md ${isMainFormOpen ? "block" : "hidden"}`}
+        className={`animate-duration-300 fixed inset-0 z-10 bg-black/20 backdrop-blur-md ${isMainFormOpen ? "block" : "hidden"}`}
         onClick={() => setIsMainFormOpen(false)}
       />
     </section>

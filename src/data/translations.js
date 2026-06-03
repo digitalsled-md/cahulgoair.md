@@ -9,8 +9,7 @@ export const translations = {
 
     hero: {
       title1: "Ваш персональный",
-      title2: "попутчик",
-      title3: "до Аэропорта",
+      title2: "попутчик до Аэропорта",
 
       order: "Забронировать место",
 
@@ -44,7 +43,7 @@ export const translations = {
       pickup: "Место сбора:",
       pickupDescription: "г. Кагул, у супермаркета Фуршет",
 
-      button: "ВЫБРАТЬ МАРШРУТ",
+      button: "Выбрать маршрут",
 
       footer:
         "Забираем пассажиров из населённых пунктов, указанных при бронировании",
@@ -74,7 +73,7 @@ export const translations = {
 
       bottomText: "Готовы к поездке? Оставьте заявку и мы всё организуем.",
 
-      button: "ОСТАВИТЬ ЗАЯВКУ",
+      button: "Оставить заявку",
     },
 
     about: {
@@ -205,8 +204,7 @@ export const translations = {
 
       copyright: "© 2026 CahulGoAir. Все права защищены.",
 
-      developed:
-        "Сайт разработан и поддерживается: SLED — Агентство цифровых решений",
+      developed: "Сайт разработан и поддерживается: Digital Sled",
     },
     form: {
       title: "Заполните форму",
@@ -278,8 +276,7 @@ export const translations = {
 
     hero: {
       title1: "Însoțitorul tău personal",
-      title2: "de călătorie",
-      title3: "spre Aeroport",
+      title2: "de călătorie spre Aeroport",
 
       order: "Rezervă un loc",
 
@@ -313,7 +310,7 @@ export const translations = {
       pickup: "Locul plecării:",
       pickupDescription: "or. Cahul, lângă supermarketul Furșet",
 
-      button: "ALEGE RUTA",
+      button: "Alege ruta",
 
       footer: "Preluăm pasageri din localitățile indicate la rezervare",
       footer2: " (de-a lungul traseului)",
@@ -345,7 +342,7 @@ export const translations = {
       bottomText:
         "Sunteți gata de drum? Lăsați o cerere iar noi vom organiza totul.",
 
-      button: "TRIMITE CEREREA",
+      button: "Trimite cererea",
     },
 
     about: {
@@ -476,8 +473,7 @@ export const translations = {
 
       copyright: "© 2026 CahulGoAir. Toate drepturile rezervate.",
 
-      developed:
-        "Site dezvoltat și susținut de: SLED — Agenție de soluții digitale",
+      developed: "Site dezvoltat și susținut de: Digital Sled",
     },
     form: {
       title: "Completați formularul",
