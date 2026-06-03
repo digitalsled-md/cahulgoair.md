@@ -6,6 +6,7 @@ import instagram from "../assets/icons/instagram.svg";
 import facebook from "../assets/icons/facebook.svg";
 import phone from "../assets/icons/phone.svg";
 import Button from "../components/Button";
+import { X } from "lucide-react";
 
 const initialFormData = {
   name: "",
@@ -20,7 +21,7 @@ const initialFormData = {
   additional: "",
 };
 
-const MainForm = ({ isMainFormOpen }) => {
+const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
   const { t, language } = useLanguage();
 
   const [formData, setFormData] = useState(initialFormData);
@@ -223,6 +224,16 @@ const MainForm = ({ isMainFormOpen }) => {
       <h2 className="mb-8 text-3xl font-bold text-[#355070] md:text-4xl">
         {t.form.title}
       </h2>
+
+      <button
+        className="absolute top-7 right-7 cursor-pointer"
+        type="button"
+        onClick={() => {
+          setIsMainFormOpen(false);
+        }}
+      >
+        <X width={30} height={30} />
+      </button>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="flex flex-col gap-5">
