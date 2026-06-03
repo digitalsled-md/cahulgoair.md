@@ -209,6 +209,8 @@ export const translations = {
     form: {
       title: "Заполните форму",
 
+      info: "Подождите, ваш запрос скоро будет обработан",
+
       name: "Имя",
       namePlaceholder: "Введите ваше имя",
 
@@ -477,6 +479,8 @@ export const translations = {
     },
     form: {
       title: "Completați formularul",
+
+      info: "Cererea dvs. va fi procesată în curând.",
 
       name: "Nume",
       namePlaceholder: "Introduceți numele dvs.",

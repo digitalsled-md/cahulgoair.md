@@ -468,6 +468,7 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
             >
               {loading ? t.form.loading : t.form.button}
             </button>
+            <p className="text-sm text-red-500">{loading ? t.form.info : ""}</p>
           </div>
         </div>
       </div>
