@@ -125,7 +125,10 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
       newErrors.ticket_photo = t.form.errors.ticket;
     }
 
-    if (formData.ticket_photo && formData.ticket_photo.size > 5 * 1024 * 1024) {
+    if (
+      formData.ticket_photo &&
+      formData.ticket_photo.size > 15 * 1024 * 1024
+    ) {
       newErrors.ticket_photo = t.form.errors.fileSize;
     }
 
