@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 const Routes = () => {
   const { t } = useLanguage();
   const [isMainFormOpen, setIsMainFormOpen] = useState(false);
+  const [selectedRoute, setSelectedRoute] = useState("bucharest");
 
   useEffect(() => {
     if (isMainFormOpen) {
@@ -29,6 +30,7 @@ const Routes = () => {
     {
       id: 1,
       location: t.cards.location1,
+      direction: "bucharest",
       image: "/Bucharest.jpg",
       scheduleDescription: t.cards.scheduleDescription1,
       timeDescription: t.cards.timeDescription1,
@@ -43,6 +45,7 @@ const Routes = () => {
       id: 2,
       location: t.cards.location2,
       image: "/Iasi.jpg",
+      direction: "iasi",
       scheduleDescription: t.cards.scheduleDescription2,
       timeDescription: t.cards.timeDescription2,
     },
@@ -51,6 +54,7 @@ const Routes = () => {
       id: 3,
       location: t.cards.location3,
       image: "/Chishinau.jpg",
+      direction: "chisinau",
       scheduleDescription: t.cards.scheduleDescription3,
       timeDescription: t.cards.timeDescription3,
 
@@ -76,11 +80,11 @@ const Routes = () => {
               route={route}
               key={route.id}
               setIsMainFormOpen={setIsMainFormOpen}
+              setSelectedRoute={setSelectedRoute}
             />
           ))}
         </div>
         <p>
-          <span className="text-accent">*</span>
           {t.cards.footer}
           <span className="font-semibold"> {t.cards.footer2}.</span>
         </p>
@@ -88,6 +92,7 @@ const Routes = () => {
       <MainForm
         isMainFormOpen={isMainFormOpen}
         setIsMainFormOpen={setIsMainFormOpen}
+        selectedRoute={selectedRoute}
       />
       <div
         className={`animate-duration-300 fixed inset-0 z-10 bg-black/20 backdrop-blur-md ${isMainFormOpen ? "block" : "hidden"}`}

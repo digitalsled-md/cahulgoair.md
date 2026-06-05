@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import viber from "../assets/icons/viber.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
@@ -21,7 +21,7 @@ const initialFormData = {
   additional: "",
 };
 
-const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
+const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
   const { t, language } = useLanguage();
 
   const [formData, setFormData] = useState(initialFormData);
@@ -93,6 +93,15 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
       label: "Giurgiulești",
     },
   ];
+
+  useEffect(() => {
+    if (selectedRoute) {
+      setFormData((prev) => ({
+        ...prev,
+        direction: selectedRoute,
+      }));
+    }
+  }, [selectedRoute]);
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({
@@ -300,7 +309,7 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
           </div>
           <div className="mt-8 flex flex-col flex-wrap gap-4 md:flex-nowrap">
             <p>{t.contact.description}</p>
-            <div className="flex items-center gap-3">
+            <div className="hidden items-center gap-3 lg:flex">
               <a
                 href="tel:+37367395926"
                 className="bg-accent flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
@@ -472,6 +481,38 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen }) => {
               {loading ? t.form.loading : t.form.button}
             </button>
             <p className="text-sm text-red-500">{loading ? t.form.info : ""}</p>
+            <div className="flex items-center justify-center gap-3 lg:hidden">
+              <a
+                href="tel:+37367395926"
+                className="bg-accent flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={phone} alt="" />
+              </a>
+
+              <a
+                href="https://wa.me/37367395926"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={whatsapp} alt="" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/drum_bun_dovezet/"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={instagram} alt="" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61553870166515"
+                target="_blank"
+                className="bg-body flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
+              >
+                <img src={facebook} alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

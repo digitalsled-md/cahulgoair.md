@@ -22,7 +22,7 @@ const benefitsIcons = [
   { icon: stroller, alt: "Luggage support" },
 ];
 
-const RouteCard = ({ route, setIsMainFormOpen }) => {
+const RouteCard = ({ route, setIsMainFormOpen, setSelectedRoute }) => {
   const { t } = useLanguage();
 
   return (
@@ -82,17 +82,14 @@ const RouteCard = ({ route, setIsMainFormOpen }) => {
           </p>
           <p>{route.timeDescription}</p>
         </div>
-        <div>
-          <p className="text-primary flex items-center gap-2 text-lg font-bold">
-            <img src={plane} alt="" aria-hidden="true" />
-            {t.cards.pickup}
-          </p>
-          <p>{t.cards.pickupDescription}</p>
-        </div>
+
         <Button
           size="max"
           className="mt-auto"
-          onClick={() => setIsMainFormOpen(true)}
+          onClick={() => {
+            setSelectedRoute(route.direction);
+            setIsMainFormOpen(true);
+          }}
         >
           <img src={whiteSchedule} alt="" />
           {t.cards.button}
