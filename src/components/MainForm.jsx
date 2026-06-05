@@ -307,9 +307,9 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
               className="h-32 w-full resize-none rounded-xl border border-transparent bg-white px-4 py-3 outline-none focus:border-[#355070]"
             />
           </div>
-          <div className="mt-8 flex flex-col flex-wrap gap-4 md:flex-nowrap">
+          <div className="mt-8 hidden flex-col flex-wrap gap-4 md:flex md:flex-nowrap">
             <p>{t.contact.description}</p>
-            <div className="hidden items-center gap-3 lg:flex">
+            <div className="flex items-center gap-3">
               <a
                 href="tel:+37367395926"
                 className="bg-accent flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
@@ -481,7 +481,10 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
               {loading ? t.form.loading : t.form.button}
             </button>
             <p className="text-sm text-red-500">{loading ? t.form.info : ""}</p>
-            <div className="flex items-center justify-center gap-3 lg:hidden">
+          </div>
+          <div className="mt-8 flex flex-col flex-wrap gap-4 md:hidden md:flex-nowrap">
+            <p>{t.contact.description}</p>
+            <div className="flex items-center gap-3">
               <a
                 href="tel:+37367395926"
                 className="bg-accent flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl"
