@@ -233,7 +233,7 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
         isMainFormOpen ? "block" : "hidden"
       }`}
     >
-      <h2 className="mb-8 text-3xl font-bold text-[#355070] md:text-4xl">
+      <h2 className="mr-8 mb-8 text-3xl font-bold text-[#355070] md:text-4xl">
         {t.form.title}
       </h2>
 
