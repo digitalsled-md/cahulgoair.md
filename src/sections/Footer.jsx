@@ -6,19 +6,21 @@ import facebook from "../assets/icons/facebook.svg";
 import phone from "../assets/icons/phone.svg";
 import Button from "../components/Button";
 
-const Footer = () => {
+const Footer = ({ showPrivacyLink = true }) => {
   const { t } = useLanguage();
 
   return (
     <footer className="bg-primary text-white">
-      <div className="container mx-auto flex flex-col gap-40 px-6 py-14 lg:flex-row lg:items-end">
-        <div className="space-y-3">
-          <a
-            href="/privacy-policy"
-            className="text-sm text-white/80 underline transition-opacity hover:opacity-70"
-          >
-            {t.footer.privacy}
-          </a>
+      <div className="container mx-auto flex flex-col gap-10 px-6 py-14 lg:flex-row lg:items-end lg:gap-40">
+        <div className="order-last space-y-3 lg:order-first">
+          {showPrivacyLink && (
+            <a
+              href="/privacy-policy"
+              className="text-sm text-white/80 underline transition-opacity hover:opacity-70"
+            >
+              {t.footer.privacy}
+            </a>
+          )}
 
           <p className="text-sm text-white/70">{t.footer.copyright}</p>
         </div>

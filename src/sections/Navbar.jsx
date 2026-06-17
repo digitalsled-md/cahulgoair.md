@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import phone from "../assets/icons/phone.svg";
 import { useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ showNavLinks = true }) => {
   const [isScrolledEnough, setIsScrolledEnough] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
@@ -32,14 +32,22 @@ const Navbar = () => {
       <nav
         className={`container mx-auto flex justify-between p-4 ${isScrolledEnough ? `shadow-body/40 shadow-lg duration-300` : ``} bg-background rounded-3xl`}
       >
-        <button onClick={scrollToTop} className="flex cursor-pointer">
-          <img src={Logo} alt="CahulGoAir logo" />
-        </button>
-        <div className="hidden items-center gap-10 lg:flex">
-          <a href="#routes">{t.nav.routes}</a>
-          <a href="#about">{t.nav.about}</a>
-          <a href="#FAQ">FAQ</a>
-        </div>
+        {window.location.pathname === "/privacy-policy" ? (
+          <a href="/" className="flex">
+            <img src={Logo} alt="CahulGoAir logo" />
+          </a>
+        ) : (
+          <button onClick={scrollToTop} className="flex cursor-pointer">
+            <img src={Logo} alt="CahulGoAir logo" />
+          </button>
+        )}
+        {showNavLinks && (
+          <div className="hidden items-center gap-10 lg:flex">
+            <a href="#routes">{t.nav.routes}</a>
+            <a href="#about">{t.nav.about}</a>
+            <a href="#FAQ">FAQ</a>
+          </div>
+        )}
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageButton />
 
@@ -59,27 +67,31 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="animate-fade-in bg-background absolute right-0 left-0 z-50 p-6 lg:hidden">
           <nav className="container mx-auto flex flex-col">
-            <a
-              href="#routes"
-              className="w-full px-4 py-3.5"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t.nav.routes}
-            </a>
-            <a
-              href="#about"
-              className="w-full px-4 py-3.5"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t.nav.about}
-            </a>
-            <a
-              href="#FAQ"
-              className="w-full px-4 py-3.5"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
-            </a>
+            {showNavLinks && (
+              <>
+                <a
+                  href="#routes"
+                  className="w-full px-4 py-3.5"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {t.nav.routes}
+                </a>
+                <a
+                  href="#about"
+                  className="w-full px-4 py-3.5"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {t.nav.about}
+                </a>
+                <a
+                  href="#FAQ"
+                  className="w-full px-4 py-3.5"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
+              </>
+            )}
             <div
               className="flex items-center gap-3 px-4"
               onClick={() => setIsMobileMenuOpen(false)}
