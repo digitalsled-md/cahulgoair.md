@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col gap-40 px-6 py-14 lg:flex-row lg:items-end">
         <div className="space-y-3">
           <a
-            href="/privacy"
+            href="/privacy-policy"
             className="text-sm text-white/80 underline transition-opacity hover:opacity-70"
           >
             {t.footer.privacy}

@@ -7,7 +7,11 @@ import Routes from "./sections/Routes";
 import Testimonials from "./sections/Testimonials";
 import WhyUs from "./sections/WhyUs";
 import MainForm from "./components/MainForm";
+import PrivacyPolicy from "./sections/PrivacyPolicy";
+
 const App = () => {
+  if (window.location.pathname === "/privacy-policy") return <PrivacyPolicy />;
+
   return (
     <>
       <Navbar />

@@ -206,6 +206,95 @@ export const translations = {
 
       developed: "Сайт разработан и поддерживается: Digital Sled",
     },
+
+    privacy: {
+      title: "Политика конфиденциальности",
+      lastUpdated: "Дата вступления в силу: 01.01.2026",
+      sections: [
+        {
+          heading: "1. Общие положения",
+          paragraphs: [
+            "Настоящая Политика конфиденциальности определяет порядок сбора, хранения, обработки и использования персональных данных клиентов компании CahulGoAir, предоставляющей услуги пассажирских перевозок.",
+            "Компания CahulGoAir уважает право каждого клиента на защиту персональных данных и обязуется обеспечивать их конфиденциальность в соответствии с действующим законодательством Республики Молдова.",
+            "Используя услуги компании, клиент соглашается с условиями настоящей Политики конфиденциальности.",
+          ],
+        },
+        {
+          heading: "2. Какие данные мы собираем",
+          paragraphs: [
+            "При бронировании поездки, обращении в компанию или использовании сайта мы можем собирать следующие данные:",
+          ],
+          list: [
+            "имя и фамилия;",
+            "номер телефона;",
+            "адрес электронной почты (при наличии);",
+            "информация о маршруте и бронировании;",
+            "сообщения и обращения, отправленные через сайт, WhatsApp, Viber, Telegram, Facebook, Instagram или другие каналы связи.",
+          ],
+        },
+        {
+          heading: "3. Цели обработки персональных данных",
+          paragraphs: [
+            "Собранные данные используются исключительно для:",
+          ],
+          list: [
+            "подтверждения бронирования поездки;",
+            "организации и предоставления услуг перевозки;",
+            "информирования клиента о времени отправления, изменениях маршрута или иных организационных вопросах;",
+            "обработки запросов и обращений клиентов;",
+            "выполнения требований действующего законодательства Республики Молдова.",
+          ],
+        },
+        {
+          heading: "4. Хранение и защита информации",
+          paragraphs: [
+            "Компания принимает необходимые организационные и технические меры для защиты персональных данных от несанкционированного доступа, изменения, раскрытия, утраты или уничтожения.",
+            "Доступ к персональным данным имеют только уполномоченные лица, которым такая информация необходима для выполнения служебных обязанностей.",
+          ],
+        },
+        {
+          heading: "5. Передача данных третьим лицам",
+          paragraphs: [
+            "Компания CahulGoAir не продаёт, не обменивает и не передаёт персональные данные клиентов третьим лицам, за исключением случаев:",
+          ],
+          list: [
+            "предусмотренных законодательством Республики Молдова;",
+            "необходимых для исполнения обязательств перед клиентом;",
+            "осуществляемых по требованию государственных органов в рамках их законных полномочий.",
+          ],
+        },
+        {
+          heading: "6. Права пользователя",
+          paragraphs: [
+            "Пользователь имеет право:",
+          ],
+          list: [
+            "получать информацию о своих персональных данных;",
+            "требовать исправления неточных или неполных данных;",
+            "требовать удаления своих данных в случаях, предусмотренных законодательством;",
+            "отозвать согласие на обработку персональных данных.",
+          ],
+          paragraphsAfter: [
+            "Для реализации своих прав пользователь может связаться с компанией по указанным контактным данным.",
+          ],
+        },
+        {
+          heading: "7. Изменение Политики конфиденциальности",
+          paragraphs: [
+            "Компания оставляет за собой право вносить изменения в настоящую Политику конфиденциальности.",
+            "Актуальная версия документа всегда публикуется на официальном сайте компании.",
+          ],
+        },
+        {
+          heading: "8. Контактная информация",
+          paragraphs: [
+            "CahulGoAir",
+            "Телефон: +373 673 95 926",
+            "E-mail: Kalinsveta129@gmail.com",
+          ],
+        },
+      ],
+    },
     form: {
       title: "Заполните форму",
 
@@ -476,6 +565,95 @@ export const translations = {
       copyright: "© 2026 CahulGoAir. Toate drepturile rezervate.",
 
       developed: "Site dezvoltat și susținut de: Digital Sled",
+    },
+
+    privacy: {
+      title: "Politica de confidențialitate",
+      lastUpdated: "Data intrării în vigoare: 01.01.2026",
+      sections: [
+        {
+          heading: "1. Dispoziții generale",
+          paragraphs: [
+            "Prezenta Politică de confidențialitate definește modul de colectare, stocare, prelucrare și utilizare a datelor cu caracter personal ale clienților companiei CahulGoAir, care prestează servicii de transport de pasageri.",
+            "Compania CahulGoAir respectă dreptul fiecărui client la protecția datelor cu caracter personal și se angajează să asigure confidențialitatea acestora în conformitate cu legislația în vigoare a Republicii Moldova.",
+            "Prin utilizarea serviciilor companiei, clientul acceptă condițiile prezentei Politici de confidențialitate.",
+          ],
+        },
+        {
+          heading: "2. Ce date colectăm",
+          paragraphs: [
+            "La rezervarea unei călătorii, la contactarea companiei sau la utilizarea site-ului, putem colecta următoarele date:",
+          ],
+          list: [
+            "nume și prenume;",
+            "număr de telefon;",
+            "adresă de e-mail (dacă este disponibilă);",
+            "informații despre rută și rezervare;",
+            "mesaje și solicitări trimise prin intermediul site-ului, WhatsApp, Viber, Telegram, Facebook, Instagram sau alte canale de comunicare.",
+          ],
+        },
+        {
+          heading: "3. Scopurile prelucrării datelor cu caracter personal",
+          paragraphs: [
+            "Datele colectate sunt utilizate exclusiv pentru:",
+          ],
+          list: [
+            "confirmarea rezervării călătoriei;",
+            "organizarea și prestarea serviciilor de transport;",
+            "informarea clientului cu privire la ora plecării, modificările de rută sau alte aspecte organizatorice;",
+            "procesarea solicitărilor și a întrebărilor clienților;",
+            "îndeplinirea cerințelor legislației în vigoare a Republicii Moldova.",
+          ],
+        },
+        {
+          heading: "4. Stocarea și protecția informațiilor",
+          paragraphs: [
+            "Compania ia măsurile organizatorice și tehnice necesare pentru a proteja datele cu caracter personal împotriva accesului neautorizat, modificării, dezvăluirii, pierderii sau distrugerii.",
+            "Accesul la datele cu caracter personal este limitat exclusiv la persoanele autorizate care au nevoie de aceste informații pentru îndeplinirea atribuțiilor de serviciu.",
+          ],
+        },
+        {
+          heading: "5. Transmiterea datelor către terți",
+          paragraphs: [
+            "Compania CahulGoAir nu vinde, nu schimbă și nu transferă datele cu caracter personal ale clienților către terțe părți, cu excepția cazurilor:",
+          ],
+          list: [
+            "prevăzute de legislația Republicii Moldova;",
+            "necesare pentru executarea obligațiilor față de client;",
+            "solicitate de autoritățile de stat în cadrul competențelor lor legale.",
+          ],
+        },
+        {
+          heading: "6. Drepturile utilizatorului",
+          paragraphs: [
+            "Utilizatorul are dreptul de a:",
+          ],
+          list: [
+            "obține informații despre datele sale cu caracter personal;",
+            "solicita corectarea datelor inexacte sau incomplete;",
+            "solicita ștergerea datelor în cazurile prevăzute de legislație;",
+            "retrage consimțământul pentru prelucrarea datelor cu caracter personal.",
+          ],
+          paragraphsAfter: [
+            "Pentru exercitarea drepturilor sale, utilizatorul poate contacta compania la datele de contact indicate.",
+          ],
+        },
+        {
+          heading: "7. Modificarea Politicii de confidențialitate",
+          paragraphs: [
+            "Compania își rezervă dreptul de a aduce modificări prezentei Politici de confidențialitate.",
+            "Versiunea actualizată a documentului va fi publicată întotdeauna pe site-ul oficial al companiei.",
+          ],
+        },
+        {
+          heading: "8. Date de contact",
+          paragraphs: [
+            "CahulGoAir",
+            "Telefon: +373 673 95 926",
+            "E-mail: Kalinsveta129@gmail.com",
+          ],
+        },
+      ],
     },
     form: {
       title: "Completați formularul",
