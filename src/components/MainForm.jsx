@@ -196,7 +196,8 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
       const requestConfig = createRequestBody();
 
       const response = await fetch(
-        "https://cahulgoair.onrender.com/api/bookings/",
+        // "https://cahulgoair.onrender.com/api/bookings/"
+        "https://api.cahulgoair.md/api/bookings/",
         {
           method: "POST",
           ...requestConfig,
