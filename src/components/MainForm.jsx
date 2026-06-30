@@ -130,10 +130,6 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
       newErrors.arrival_datetime = t.form.errors.datetime;
     }
 
-    if (formData.arrival_type === "airport" && !formData.ticket_photo) {
-      newErrors.ticket_photo = t.form.errors.ticket;
-    }
-
     if (
       formData.ticket_photo &&
       formData.ticket_photo.size > 15 * 1024 * 1024
