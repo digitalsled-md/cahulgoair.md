@@ -450,11 +450,11 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
                 </span>
               </label>
 
-              {/* {errors.ticket_photo && (
+              {errors.ticket_photo && (
                 <p className="mt-1 text-sm text-red-500">
                   {errors.ticket_photo}
                 </p>
-              )} */}
+              )}
             </div>
           )}
 
