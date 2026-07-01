@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { PhoneInput } from "react-international-phone";
+import { isValidPhoneNumber } from "libphonenumber-js";
 import { useLanguage } from "../contexts/LanguageContext";
 import viber from "../assets/icons/viber.svg";
 import whatsapp from "../assets/icons/whatsapp.svg";
@@ -118,7 +120,7 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
   const validate = () => {
     const newErrors = {};
 
-    if (!formData.phone.trim()) {
+    if (!formData.phone || !isValidPhoneNumber(formData.phone)) {
       newErrors.phone = t.form.errors.phone;
     }
 
@@ -265,16 +267,12 @@ const MainForm = ({ setIsMainFormOpen, isMainFormOpen, selectedRoute }) => {
           <div>
             <label className="mb-2 block">{t.form.phone}</label>
 
-            <input
-              type="tel"
+            <PhoneInput
+              defaultCountry="md"
               value={formData.phone}
-              onChange={(e) => handleChange("phone", e.target.value)}
+              onChange={(phone) => handleChange("phone", phone)}
               placeholder={t.form.phonePlaceholder}
-              className={`h-14 w-full rounded-xl border bg-white px-4 outline-none ${
-                errors.phone
-                  ? "border-red-500"
-                  : "border-transparent focus:border-[#355070]"
-              }`}
+              className={errors.phone ? "phone-input-error" : ""}
             />
 
             {errors.phone && (

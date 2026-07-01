@@ -19,6 +19,40 @@ body {
   font-family: "Unbounded", sans-serif;
 }
 
+/* react-international-phone: match form field styles */
+.react-international-phone-input-container {
+  --react-international-phone-height: 3.5rem;
+  --react-international-phone-border-radius: 0.75rem;
+  --react-international-phone-font-family: "Unbounded", sans-serif;
+  --react-international-phone-font-size: 0.875rem;
+  --react-international-phone-border-color: transparent;
+  --react-international-phone-background-color: white;
+  --react-international-phone-input-padding: 0 1rem;
+  --react-international-phone-country-selector-padding: 0 0.75rem;
+  --react-international-phone-selected-dropdown-item-background-color: #355070;
+  --react-international-phone-dropdown-item-background-color-hover: #ececec;
+  --react-international-phone-country-selector-background-color-hover: #f5f5f5;
+  width: 100%;
+}
+
+.react-international-phone-input {
+  outline: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.react-international-phone-input-container:focus-within
+  .react-international-phone-input,
+.react-international-phone-input-container:focus-within
+  .react-international-phone-country-selector-button {
+  border-color: #355070;
+}
+
+.phone-input-error .react-international-phone-input,
+.phone-input-error .react-international-phone-country-selector-button {
+  border-color: #ef4444 !important;
+}
+
 @layer utilities {
   @keyframes fade-in {
     0% {
